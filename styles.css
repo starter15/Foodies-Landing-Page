@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+.header {
+    background: #ff5733;
+    font-family: sans-serif;
+    color: white;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: auto; 
+    animation: movedown 550ms ease-in;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 3rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    position: relative;
+}
+.nav-links a {
+    height: 100%;
+    border-bottom: 2px solid rgb(9, 8, 8);
+    transition: 0.4s linear;
+    }
+.nav-links a:hover::before  {
+        width: 90%;
+    }
+
+
+@keyframes movedown {
+    from{transform: translateY(-100%);
+
+    }to{transform: translateY(0%);
+
+    }}
+
+.home {
+    height: 100vh;
+    background: linear-gradient(rgb(14, 0, 0), transparent),
+    url(t2.jpg) no-repeat center center/cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    animation: change 15s infinite ease-in-out;
+}
+    @keyframes change{
+        0%
+        {
+            background: linear-gradient(rgb(14, 0, 0), transparent),
+            url(t2.jpg); 
+            background-size: cover ;
+        
+            
+        }
+        20%
+        {
+            background: linear-gradient(rgb(14, 0, 0), transparent),
+            url(title.jpg) ;
+            background-size: cover;
+            
+        } 
+        40%
+        {
+            background: linear-gradient(rgb(14, 0, 0), transparent),
+            url(Pizza.jpeg) ;
+            background-size: cover;
+        } 
+        60%
+        {
+            background: linear-gradient(rgb(14, 0, 0), transparent),
+            url(BBG.jpg) ;
+            background-size: cover;
+            background-position: center;
+
+        }
+        80%
+        {
+            background: linear-gradient(rgb(14, 0, 0), transparent),
+             url(ICE.jpg) ;
+            background-size: cover;
+
+        }
+        100%
+        {
+            background: linear-gradient(rgb(14, 0, 0), transparent),
+            url(img.jpg) ;
+            background-size: cover;
+        }
+    }
+.home h1 {
+    font-size: 3rem;
+}
+
+.home p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.cta {
+    padding: 10px 20px;
+    border: none;
+    background: #ff5733;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cta:hover {
+    background: #c44525;
+}
+
+.about, .menu, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2, .menu h2, .Feedback h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    display: inline-block;
+    margin: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.menu-item p {
+    padding: 0 10px 10px;
+    font-size: 1rem;
+}
+
+.Feedback form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.Feedback input, .Feedback textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.Feedback button {
+    padding: 10px 20px;
+    border: none;
+    background: #ff5733;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.Feedback button:hover {
+    background: #c44525;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+   
+    .menu-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
